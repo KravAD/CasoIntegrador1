@@ -46,6 +46,7 @@ public class Main {
         int num = 315;
         System.out.println("Prime factors of " + num + ": " + monitor.factorize(num));
 
+// Clase Planificador de Tareas
 
     }
 }
