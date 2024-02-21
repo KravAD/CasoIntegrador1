@@ -3,6 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import org.example.CronometroCosmico.Planet;
 import org.example.PlanTareas;
+import org.example.ComInterplanetaria;
 
 
 public class Main {
@@ -101,5 +102,15 @@ public class Main {
             System.out.println();
 
         }
+
+// Clase Comunicación Interplanetaria
+
+        ComInterplanetaria sistema = new ComInterplanetaria();
+
+        String mensaje = "Hola Mundo";
+
+        System.out.println("Número de vocales en '" + mensaje + "': " + sistema.contarVocales(mensaje));
+        System.out.println("Mensaje invertido: " + sistema.invertirMensaje(mensaje));
+        System.out.println("¿Es palíndromo? " + (sistema.esPalindromo(mensaje) ? "Sí" : "No"));
     }
 }
