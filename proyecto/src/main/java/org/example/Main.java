@@ -9,12 +9,14 @@ public class Main {
 
         long earthSeconds = 60 * 60 * 24 * 365;
         double[] planetTime = newPlanet.convertTime(earthSeconds);
-        System.out.println("Time on new planet: " + planetTime[0] + " seconds, " + planetTime[1] + " minutes, " + planetTime[2] + " hours, " + planetTime[3] + " days, " + planetTime[4] + " years");
+        System.out.println("Tiempo : " + planetTime[0] + " segundos, " + planetTime[1] + " minutos, " + planetTime[2] + " horas, " + planetTime[3] + " dias, " + planetTime[4] + " horas");
 
         long intLimit = newPlanet.getIntLimit();
         double floatLimit = newPlanet.getFloatLimit();
         System.out.println("Int limit: " + intLimit + ", Float limit: " + floatLimit);
 
 // Clase Recursos y Suministros
+
+
     }
 }
