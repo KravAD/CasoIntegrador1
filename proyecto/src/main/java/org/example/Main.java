@@ -69,7 +69,37 @@ public class Main {
         System.out.println("Carga de trabajo de Alice: " + organizador.calcularCargaDeTrabajo("Alice", pesosPorTarea));
         System.out.println("Carga de trabajo de Bob: " + organizador.calcularCargaDeTrabajo("Bob", pesosPorTarea));
 
+// Clase Navegador Estelar
 
+        int[][] terreno = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
 
+        NavegEstelar modulo = new NavegEstelar(terreno);
+
+        modulo.visualizarTerreno();
+
+        int[][] matriz1 = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+        int[][] matriz2 = {
+                {7, 8},
+                {9, 10},
+                {11, 12}
+        };
+
+        int[][] producto = modulo.multiplicarMatrices(matriz1, matriz2);
+
+        System.out.println("Producto de las matrices:");
+        for (int[] fila : producto) {
+            for (int celda : fila) {
+                System.out.print(celda + " ");
+            }
+            System.out.println();
+
+        }
     }
 }
