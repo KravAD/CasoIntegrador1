@@ -1,5 +1,8 @@
 package org.example;
+import java.util.HashMap;
+import java.util.Map;
 import org.example.CronometroCosmico.Planet;
+import org.example.PlanTareas;
 
 
 public class Main {
@@ -47,6 +50,26 @@ public class Main {
         System.out.println("Prime factors of " + num + ": " + monitor.factorize(num));
 
 // Clase Planificador de Tareas
+
+        PlanTareas organizador = new PlanTareas();
+
+        organizador.asignarTarea("Alice", "Tarea1");
+        organizador.asignarTarea("Alice", "Tarea2");
+        organizador.asignarTarea("Bob", "Tarea3");
+        organizador.asignarTarea("Bob", "Tarea4");
+
+        organizador.mostrarTablaDeTareas();
+
+        Map<String, Integer> pesosPorTarea = new HashMap<>();
+        pesosPorTarea.put("Tarea1", 2);
+        pesosPorTarea.put("Tarea2", 3);
+        pesosPorTarea.put("Tarea3", 4);
+        pesosPorTarea.put("Tarea4", 5);
+
+        System.out.println("Carga de trabajo de Alice: " + organizador.calcularCargaDeTrabajo("Alice", pesosPorTarea));
+        System.out.println("Carga de trabajo de Bob: " + organizador.calcularCargaDeTrabajo("Bob", pesosPorTarea));
+
+
 
     }
 }
