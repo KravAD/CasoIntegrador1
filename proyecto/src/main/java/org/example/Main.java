@@ -16,6 +16,23 @@ public class Main {
         System.out.println("Int limit: " + intLimit + ", Float limit: " + floatLimit);
 
 // Clase Recursos y Suministros
+        RecursosSuministros recursos = new RecursosSuministros(2, 3, 4);  // Consumo diario de agua, comida, y oxígeno
+
+        int period = 5;
+        String periodType = "days";
+
+        double waterForPeriod = recursos.calculateResourceForPeriod(recursos.getDailyWater(), period, periodType);
+        double foodForPeriod = recursos.calculateResourceForPeriod(recursos.getDailyFood(), period, periodType);
+        double oxygenForPeriod = recursos.calculateResourceForPeriod(recursos.getDailyOxygen(), period, periodType);
+
+        System.out.println("Water needed for " + period + " " + periodType + ": " + waterForPeriod);
+        System.out.println("Food needed for " + period + " " + periodType + ": " + foodForPeriod);
+        System.out.println("Oxygen needed for " + period + " " + periodType + ": " + oxygenForPeriod);
+
+        double[] resourcesForPeriod = {waterForPeriod, foodForPeriod, oxygenForPeriod};
+        System.out.println("Average: " + recursos.calculateAverage(resourcesForPeriod));
+        System.out.println("Min: " + recursos.findMin(resourcesForPeriod));
+        System.out.println("Max: " + recursos.findMax(resourcesForPeriod));
 
 
     }
