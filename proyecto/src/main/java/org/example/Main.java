@@ -36,6 +36,16 @@ public class Main {
 
 // Clase Sistema de Alerta y Monitoreo
 
-        
+        SistemaAlerta monitor = new SistemaAlerta(6, 36, 1014);  // Niveles iniciales de radiación, temperatura, y presión
+
+        monitor.monitor();
+
+        int n = 5;
+        System.out.println("First " + n + " prime events: " + monitor.findPrimeEvents(n));
+
+        int num = 315;
+        System.out.println("Prime factors of " + num + ": " + monitor.factorize(num));
+
+
     }
 }
