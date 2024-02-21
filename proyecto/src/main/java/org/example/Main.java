@@ -34,6 +34,8 @@ public class Main {
         System.out.println("Min: " + recursos.findMin(resourcesForPeriod));
         System.out.println("Max: " + recursos.findMax(resourcesForPeriod));
 
+// Clase Sistema de Alerta y Monitoreo
 
+        
     }
 }
